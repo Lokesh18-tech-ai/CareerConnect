@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "CareerConnect"
+version = "1.0.0"
+id = "artifacts/career-connect"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19107
+
+[services.development]
+run = "pnpm --filter @workspace/career-connect run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/career-connect", "run", "build" ]
+publicDir = "artifacts/career-connect/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19107"
+BASE_PATH = "/"
