@@ -5,8 +5,8 @@ import { cn, typeColor, levelColor, timeAgo, getInitials, cleanSalary } from "@/
 import { useAuth } from "@/lib/auth";
 import JobApplicationWizard from "@/components/JobApplicationWizard";
 
-const BASE = import.meta.env.BASE_URL;
-const API = `${BASE}api`;
+import API from "@/lib/api";
+
 
 interface Job {
   id: number; title: string; companyId: number; companyName?: string | null; companyLogo?: string | null;

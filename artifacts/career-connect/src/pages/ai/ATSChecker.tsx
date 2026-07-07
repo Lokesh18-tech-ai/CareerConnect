@@ -9,8 +9,8 @@ import { Label } from "@/components/ui/label";
 import { logAIActivity } from "@/lib/aiActivityLog";
 import { notify } from "@/lib/toast";
 
-const BASE = import.meta.env.BASE_URL;
-const API = `${BASE}api`;
+import API from "@/lib/api";
+
 
 interface ResumeResult { score: number; strengths: string[]; improvements: string[]; keywords: string[]; summary: string; }
 

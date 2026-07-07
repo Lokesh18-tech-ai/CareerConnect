@@ -18,8 +18,8 @@ import { notify } from "@/lib/toast";
 import { getReadIds, getDeletedIds, markRead, markAllRead, deleteOne, deleteAll } from "@/lib/notificationsStore";
 import { getAIActivity, type AIActivityType } from "@/lib/aiActivityLog";
 
-const BASE = import.meta.env.BASE_URL;
-const API = `${BASE}api`;
+import API from "@/lib/api";
+
 
 type Category = "all" | "applications" | "recruiters" | "interviews" | "ai" | "system";
 

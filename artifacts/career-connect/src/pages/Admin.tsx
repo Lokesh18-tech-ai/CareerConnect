@@ -4,8 +4,8 @@ import { cn } from "@/lib/utils";
 import { useAuth } from "@/lib/auth";
 import { Link } from "wouter";
 
-const BASE = import.meta.env.BASE_URL;
-const API = `${BASE}api`;
+import API from "@/lib/api";
+
 
 interface Stats {
   totalUsers: number; totalJobs: number; totalCompanies: number; totalApplications: number;

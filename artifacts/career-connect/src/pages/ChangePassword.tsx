@@ -8,8 +8,8 @@ import { useAuth } from "@/lib/auth";
 import { notify } from "@/lib/toast";
 import { cn } from "@/lib/utils";
 
-const BASE = import.meta.env.BASE_URL;
-const API = `${BASE}api`;
+import API from "@/lib/api";
+
 
 function passwordStrength(pw: string): { score: number; label: string; color: string } {
   let score = 0;

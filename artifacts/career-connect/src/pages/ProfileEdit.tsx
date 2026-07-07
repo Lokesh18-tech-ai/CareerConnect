@@ -26,8 +26,8 @@ import {
   type ProfileExtras, type EducationEntry, type ExperienceEntry,
 } from "@/lib/profileExtras";
 
-const BASE = import.meta.env.BASE_URL;
-const API = `${BASE}api`;
+import API from "@/lib/api";
+
 
 function uid() {
   return Math.random().toString(36).slice(2, 9);

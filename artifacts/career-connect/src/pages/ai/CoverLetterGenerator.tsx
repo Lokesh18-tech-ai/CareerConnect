@@ -10,8 +10,8 @@ import { downloadTextFile } from "@/lib/aiFileReader";
 import { logAIActivity } from "@/lib/aiActivityLog";
 import { notify } from "@/lib/toast";
 
-const BASE = import.meta.env.BASE_URL;
-const API = `${BASE}api`;
+import API from "@/lib/api";
+
 
 export default function CoverLetterGeneratorPage() {
   const [resumeText, setResumeText] = useState("");

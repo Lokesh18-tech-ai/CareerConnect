@@ -8,8 +8,8 @@ import { LevelDropdown, LEVEL_OPTIONS } from "@/components/LevelDropdown";
 import { useAuth } from "@/lib/auth";
 import { cn } from "@/lib/utils";
 
-const BASE = import.meta.env.BASE_URL;
-const API = `${BASE}api`;
+import API from "@/lib/api";
+
 
 interface Job {
   id: number; title: string; companyName?: string | null; companyLogo?: string | null;

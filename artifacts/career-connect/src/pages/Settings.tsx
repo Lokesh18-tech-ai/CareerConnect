@@ -11,8 +11,8 @@ import { useAuth } from "@/lib/auth";
 import { notify } from "@/lib/toast";
 import { getPrefs, savePrefs, type UserPrefs } from "@/lib/settingsStore";
 
-const BASE = import.meta.env.BASE_URL;
-const API = `${BASE}api`;
+import API from "@/lib/api";
+
 
 export default function SettingsPage() {
   const { user, logout } = useAuth();

@@ -18,8 +18,8 @@ import { cn, statusColor, statusLabel, timeAgo, getInitials } from "@/lib/utils"
 import { useAuth } from "@/lib/auth";
 import { notify } from "@/lib/toast";
 
-const BASE = import.meta.env.BASE_URL;
-const API = `${BASE}api`;
+import API from "@/lib/api";
+
 
 interface Application {
   id: number; jobId: number; userId: number; status: string; coverLetter?: string | null;

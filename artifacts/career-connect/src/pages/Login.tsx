@@ -10,8 +10,8 @@ import type { AuthUser } from "@/lib/auth";
 import { notify } from "@/lib/toast";
 import { cn } from "@/lib/utils";
 
-const BASE = import.meta.env.BASE_URL;
-const API = `${BASE}api`;
+import API from "@/lib/api";
+
 
 const INPUT_CLS = "w-full bg-background/60 border border-border text-foreground text-sm rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/50 focus:shadow-[0_0_0_4px_rgba(59,130,246,0.12),0_0_20px_rgba(59,130,246,0.18)] placeholder:text-muted-foreground transition-all duration-300";
 const LABEL_CLS = "block text-sm font-medium text-foreground mb-1.5";

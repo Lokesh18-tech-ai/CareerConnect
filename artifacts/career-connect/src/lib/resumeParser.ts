@@ -1,5 +1,5 @@
-const BASE = import.meta.env.BASE_URL;
-const API = `${BASE}api`;
+import API from "@/lib/api";
+
 
 export interface ParsedResume {
   fullName: string;

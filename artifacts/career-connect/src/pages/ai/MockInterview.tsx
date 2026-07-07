@@ -10,8 +10,8 @@ import { cn } from "@/lib/utils";
 import { logAIActivity } from "@/lib/aiActivityLog";
 import { notify } from "@/lib/toast";
 
-const BASE = import.meta.env.BASE_URL;
-const API = `${BASE}api`;
+import API from "@/lib/api";
+
 const SECONDS_PER_QUESTION = 90;
 
 interface InterviewQ { question: string; tips: string; category: string; }

@@ -7,8 +7,8 @@ import { JobCard } from "@/components/JobCard";
 import { getInitials, formatDate } from "@/lib/utils";
 import { useAuth } from "@/lib/auth";
 
-const BASE = import.meta.env.BASE_URL;
-const API = `${BASE}api`;
+import API from "@/lib/api";
+
 
 interface Company { id: number; name: string; logo?: string | null; industry?: string | null; location?: string | null; size?: string | null; website?: string | null; description?: string | null; founded?: number | null; openPositions?: number | null; rating?: number | null; reviewCount?: number | null; }
 interface Job { id: number; title: string; companyName?: string | null; companyLogo?: string | null; location: string; type: string; level: string; salary?: string | null; featured: boolean; createdAt: string; }
