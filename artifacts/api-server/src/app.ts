@@ -11,7 +11,6 @@ const isDev = process.env.NODE_ENV !== "production";
 app.use(
   pinoHttp({
     logger,
-    // In dev, log all requests. In prod, skip health checks.
     autoLogging: isDev
       ? true
       : { ignore: (req) => req.url === "/api/healthz" },
@@ -32,14 +31,7 @@ app.use(
 
 app.use(
   cors({
-    origin: isDev
-      ? [
-          "http://localhost:5173",
-          "http://localhost:5174",
-          "http://localhost:4173",
-          "http://127.0.0.1:5173",
-        ]
-      : process.env.FRONTEND_URL ?? true,
+    origin: true,
     credentials: true,
   })
 );
